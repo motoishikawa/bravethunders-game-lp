@@ -1,161 +1,64 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{date1}}〜{{date2}} vs {{opponent}} | 川崎ブレイブサンダース</title>
-<style>
-  body { font-family: 'Noto Sans JP', sans-serif; background: #fff; margin: 0; padding: 0; color: #111; }
-  header { background: #770000; color: #fff; padding: 20px; text-align: center; }
-  section { padding: 40px 20px; max-width: 900px; margin: auto; }
-  h2 { border-left: 6px solid #770000; padding-left: 10px; margin-top: 40px; }
-  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-  .card { border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; }
-  img { max-width: 100%; border-radius: 4px; }
-  a.btn { background: #770000; color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 4px; display: inline-block; margin-top: 8px; }
-</style>
-</head>
-
-<body>
-<header>
-  <h1>{{date1}}〜{{date2}} vs {{opponent}}</h1>
-  <p>KAWASAKI BRAVE THUNDERS ホームゲーム</p>
-</header>
-
-<section>
-  <h2>試合情報</h2>
-  <p><strong>スラッグ:</strong> game_20251213_20251214</p>
-  <p>{{description}}</p>
-  <div style="display:flex; flex-direction:column; gap:10px;">
-    <img src="{{mv_pc}}" alt="{{opponent}} メインビジュアル（PC）">
-    <img src="{{mv_sp}}" alt="{{opponent}} メインビジュアル（SP）">
-  </div>
-  <p><a href="{{opponent_url}}" target="_blank">
-    <img src="{{opponent_logo}}" alt="{{opponent}} ロゴ" style="max-height:60px;">
-  </a></p>
-</section>
-
-<section>
-  <h2>特別イベント</h2>
-  <img src="{{special_img}}" alt="特別イベント">
-  <p>{{special_desc}}</p>
-  <a href="{{special_link}}" class="btn">詳細を見る</a>
-</section>
-
-<section>
-  <h2>会場情報</h2>
-  <img src="{{arena_img1}}" alt="アリーナ外観">
-  <img src="{{arena_img2}}" alt="アリーナ外観2">
-</section>
-
 <section>
   <h2>NEWS</h2>
-  <div class="card-grid">
-    {{#news}}
-    <div class="card">
-      <p><strong>{{date}}</strong></p>
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/news}}
-  </div>
+  <div class="card-grid"><div class="card"><p><strong>2025/12/01</strong></p><p>フロンターレコラボグッズ情報を公開しました</p></div>
+<div class="card"><p><strong>2025/12/05</strong></p><p>サンダーススクエアイベントを更新しました</p></div>
+</div>
 </section>
 
 <section>
   <h2>SCHEDULE</h2>
-  <div class="card-grid">
-    {{#schedule}}
-    <div class="card">
-      <p>{{date}}（{{week}}）{{time}}</p>
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/schedule}}
-  </div>
+  <div class="card-grid"><div class="card"><p><strong>2025/12/13</strong></p><p>土 11:00</p><p>入場待機列開始</p></div>
+<div class="card"><p><strong>2025/12/13</strong></p><p>土 13:00</p><p>サンダーススクエアオープン</p></div>
+<div class="card"><p><strong>2025/12/13</strong></p><p>土 16:05</p><p>試合開始</p></div>
+<div class="card"><p><strong>2025/12/14</strong></p><p>日 9:00</p><p>入場待機列開始</p></div>
+<div class="card"><p><strong>2025/12/14</strong></p><p>日 15:05</p><p>試合開始</p></div>
+</div>
 </section>
 
 <section>
   <h2>EVENTS</h2>
-  <div class="card-grid">
-    {{#events}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/events}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/event1.jpg" alt=""><p>12月13日は「雷神DAY」開催！</p></div>
+<div class="card"><img src="https://example.com/event2.jpg" alt=""><p>サンダーススクエアに巨大ツリー登場！</p></div>
+</div>
 </section>
 
 <section>
   <h2>GOODS</h2>
-  <div class="card-grid">
-    {{#goods}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/goods}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/goods1.jpg" alt=""><p>コラボTシャツ（数量限定）</p></div>
+<div class="card"><img src="https://example.com/goods2.jpg" alt=""><p>サンダースマフラータオル新発売！</p></div>
+</div>
 </section>
 
 <section>
   <h2>FOODS</h2>
-  <div class="card-grid">
-    {{#foods}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/foods}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/food1.jpg" alt=""><p>特製からあげ丼</p></div>
+<div class="card"><img src="https://example.com/food2.jpg" alt=""><p>選手監修スムージー</p></div>
+</div>
 </section>
 
 <section>
   <h2>PERFORMER</h2>
-  <div class="card-grid">
-    {{#performer}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/performer}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/performer1.jpg" alt=""><p>IRIS（アイリス）</p></div>
+<div class="card"><img src="https://example.com/performer2.jpg" alt=""><p>サンダースガールズ</p></div>
+</div>
 </section>
 
 <section>
   <h2>SERVICE</h2>
-  <div class="card-grid">
-    {{#service}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/service}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/service1.jpg" alt=""><p>ファンクラブブースで限定グッズ販売</p></div>
+<div class="card"><img src="https://example.com/service2.jpg" alt=""><p>来場ポイントで抽選イベント！</p></div>
+</div>
 </section>
 
 <section>
   <h2>&ONE</h2>
-  <div class="card-grid">
-    {{#andone}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>{{desc}}</p>
-      <a href="{{link}}" class="btn">詳細</a>
-    </div>
-    {{/andone}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/andone.jpg" alt=""><p>地域清掃活動「&ONE CLEAN PROJECT」実施！</p><a href="https://example.com/andone" class="btn">詳細</a></div>
+</div>
 </section>
 
 <section>
   <h2>FANCLUB</h2>
-  <div class="card-grid">
-    {{#fanclub}}
-    <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
-    </div>
-    {{/fanclub}}
-  </div>
+  <div class="card-grid"><div class="card"><img src="https://example.com/fan1.jpg" alt=""><p>ファンクラブ限定ステッカープレゼント</p></div>
+<div class="card"><img src="https://example.com/fan2.jpg" alt=""><p>当日入会で500ポイント付与！</p></div>
+</div>
 </section>
-
-</body>
-</html>
