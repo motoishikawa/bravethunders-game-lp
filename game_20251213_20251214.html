@@ -1,68 +1,154 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>{{date1}}〜{{date2}} vs {{opponent}} | KAWASAKI BRAVE THUNDERS</title>
-  <style>
-    body { font-family: "Noto Sans JP", sans-serif; margin: 0; background: #fff; color: #222; }
-    header { background: #7b001c; color: #fff; text-align: center; padding: 24px 8px; }
-    main { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
-    h1 { font-size: 1.8em; margin-bottom: 0.3em; }
-    h2 { font-size: 1.2em; border-left: 6px solid #7b001c; padding-left: 8px; margin-top: 40px; }
-    img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
-    a.button {
-      display: inline-block; margin-top: 8px; background: #7b001c; color: #fff;
-      text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold;
-    }
-    footer { background: #111; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2025/12/13〜2025/12/14 vs 名古屋ダイヤモンドドルフィンズ | 川崎ブレイブサンダース</title>
+<style>
+  body { font-family: 'Noto Sans JP', sans-serif; background: #fff; margin: 0; padding: 0; color: #111; }
+  header { background: #770000; color: #fff; padding: 20px; text-align: center; }
+  section { padding: 40px 20px; max-width: 900px; margin: auto; }
+  h2 { border-left: 6px solid #770000; padding-left: 10px; margin-top: 40px; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+  .card { border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; }
+  img { max-width: 100%; border-radius: 4px; }
+  a.btn { background: #770000; color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 4px; display: inline-block; margin-top: 8px; }
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>{{date1}}〜{{date2}} vs {{opponent}}</h1>
-    <p>KAWASAKI BRAVE THUNDERS ホームゲーム</p>
-  </header>
+<header>
+  <h1>2025/12/13〜2025/12/14 vs 名古屋ダイヤモンドドルフィンズ</h1>
+  <p>KAWASAKI BRAVE THUNDERS ホームゲーム</p>
+</header>
 
-  <main>
-    
-    <section>
-      <img src="{{mv_pc}}" alt="{{opponent}} メインビジュアル PC版" />
-      <img src="{{mv_sp}}" alt="{{opponent}} メインビジュアル SP版" />
-    </section>
+<section>
+  <h2>試合情報</h2>
+  <p>テストです</p>
+  <img src="https://example.com/mv_pc.jpg" alt="名古屋ダイヤモンドドルフィンズ メインビジュアル">
+</section>
 
-    
-    <section>
-      <h2>試合情報</h2>
-      <p>{{description}}</p>
-    </section>
+<section>
+  <h2>特別イベント</h2>
+  <img src="https://example.com/special.jpg" alt="特別イベント">
+  <p>川崎フロンターレとのコラボ企画実施！</p>
+  <a href="https://example.com/special" class="btn">詳細を見る</a>
+</section>
 
-    
-    <section>
-      <h2>特別イベント</h2>
-      <img src="{{special_img}}" alt="特別イベント" />
-      <p>{{special_desc}}</p>
-      <a href="{{special_link}}" class="button" target="_blank">詳細を見る</a>
-    </section>
+<section>
+  <h2>会場情報</h2>
+  <img src="https://example.com/arena1.jpg" alt="アリーナ外観">
+  <img src="https://example.com/arena2.jpg" alt="アリーナ外観2">
+</section>
 
-    
-    <section>
-      <h2>対戦相手情報</h2>
-      <img src="{{opponent_logo}}" alt="{{opponent}} ロゴ" />
-      <p><a href="{{opponent_url}}" target="_blank">{{opponent}} 公式サイトへ</a></p>
-    </section>
+<section>
+  <h2>NEWS</h2>
+  <div class="card-grid">
+    {{#news}}
+    <div class="card">
+      <p><strong>{{date}}</strong></p>
+      <p>{{text}}</p>
+    </div>
+    {{/news}}
+  </div>
+</section>
 
-    
-    <section>
-      <h2>会場情報</h2>
-      <p>会場：とどろきアリーナ</p>
-      <img src="{{arena_img1}}" alt="アリーナ外観" />
-      <img src="{{arena_img2}}" alt="アリーナ外観2" />
-    </section>
-  </main>
+<section>
+  <h2>SCHEDULE</h2>
+  <div class="card-grid">
+    {{#schedule}}
+    <div class="card">
+      <p>{{date}}（{{week}}）{{time}}</p>
+      <p>{{text}}</p>
+    </div>
+    {{/schedule}}
+  </div>
+</section>
 
-  <footer>
-    &copy; KAWASAKI BRAVE THUNDERS
-  </footer>
+<section>
+  <h2>EVENTS</h2>
+  <div class="card-grid">
+    {{#events}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
+    </div>
+    {{/events}}
+  </div>
+</section>
+
+<section>
+  <h2>GOODS</h2>
+  <div class="card-grid">
+    {{#goods}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
+    </div>
+    {{/goods}}
+  </div>
+</section>
+
+<section>
+  <h2>FOODS</h2>
+  <div class="card-grid">
+    {{#foods}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
+    </div>
+    {{/foods}}
+  </div>
+</section>
+
+<section>
+  <h2>PERFORMER</h2>
+  <div class="card-grid">
+    {{#performer}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
+    </div>
+    {{/performer}}
+  </div>
+</section>
+
+<section>
+  <h2>SERVICE</h2>
+  <div class="card-grid">
+    {{#service}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
+    </div>
+    {{/service}}
+  </div>
+</section>
+
+<section>
+  <h2>&ONE</h2>
+  <div class="card-grid">
+    {{#andone}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{desc}}</p>
+      <a href="{{link}}" class="btn">詳細</a>
+    </div>
+    {{/andone}}
+  </div>
+</section>
+
+<section>
+  <h2>FANCLUB</h2>
+  <div class="card-grid">
+    {{#fanclub}}
+    <div class="card">
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
+    </div>
+    {{/fanclub}}
+  </div>
+</section>
+
 </body>
 </html>
