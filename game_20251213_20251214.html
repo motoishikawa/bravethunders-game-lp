@@ -3,72 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{opponent}}｜川崎ブレイブサンダース {{date1}}-{{date2}}</title>
+  <title>game_20251213_20251214｜KAWASAKI BRAVE THUNDERS</title>
   <style>
-    body { font-family: "Noto Sans JP", sans-serif; margin: 0; background: #fff; color: #222; line-height: 1.6; }
-    header { text-align: center; padding: 40px 20px; background: #7b001c; color: white; }
-    header h1 { font-size: 1.8em; margin: 0; }
-    header p { font-size: 1em; opacity: 0.9; }
-
-    .mv { width: 100%; text-align: center; margin-bottom: 40px; }
-    .mv img { width: 100%; max-width: 1200px; }
-
-    section { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; }
-    section h2 { border-left: 6px solid #7b001c; padding-left: 10px; font-size: 1.3em; margin-bottom: 10px; }
-
-    .description { font-size: 1.1em; margin-bottom: 20px; }
-    .special { background: #faf5f5; padding: 20px; border-radius: 12px; margin-bottom: 40px; }
-    .special img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
-
-    .arena { text-align: center; margin-top: 40px; }
-    .arena img { width: 100%; max-width: 800px; border-radius: 8px; }
-
-    footer { text-align: center; padding: 30px; background: #111; color: #fff; font-size: 0.9em; }
-    a.button {
-      display: inline-block;
-      background: #7b001c;
-      color: white;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
+    body { font-family: "Noto Sans JP", sans-serif; margin: 0; padding: 0; color: #222; background: #fff; }
+    header { background: #7b001c; color: #fff; text-align: center; padding: 24px; }
+    main { max-width: 900px; margin: 0 auto; padding: 20px; }
+    section { margin-bottom: 40px; }
+    h1 { font-size: 1.6em; margin-bottom: 10px; }
+    h2 { font-size: 1.2em; border-left: 5px solid #7b001c; padding-left: 8px; }
+    img { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
+    a.button { background: #7b001c; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>{{date1}}〜{{date2}} vs {{opponent}}</h1>
-    <p>KAWASAKI BRAVE THUNDERS ホームゲーム</p>
-  </header>
+<header>
+  <h1>game_20251213_20251214</h1>
+</header>
+<main>
 
-  <div class="mv">
-    <picture>
-      <source media="(max-width: 768px)" srcset="{{mv_sp}}">
-      <img src="{{mv_pc}}" alt="{{opponent}} メインビジュアル">
-    </picture>
-  </div>
+<!-- ===== games ===== -->
+<section>
+  <h2>GAME INFO</h2>
+  <p>2025/12/13〜2025/12/14 vs 名古屋ダイヤモンドドルフィンズ</p>
+  <img src="https://example.com/mv_pc.jpg" alt="名古屋ダイヤモンドドルフィンズ メインビジュアル">
+  <p>年内最終戦！会場全体が熱気に包まれる2日間</p>
 
-  <section class="description">
-    <h2>試合情報</h2>
-    <p>{{description}}</p>
-  </section>
+  <h2>特別イベント</h2>
+  <img src="https://example.com/special.jpg" alt="special">
+  <p>川崎フロンターレとのコラボ企画実施！</p>
+  <a href="https://example.com/special" class="button">詳細を見る</a>
 
-  <section class="special">
-    <h2>特別イベント</h2>
-    <img src="{{special_im}}" alt="特別イベント">
-    <p>{{special_desc}}</p>
-    <a href="{{special_link}}" target="_blank" class="button">詳細を見る</a>
-  </section>
+  <h2>会場情報</h2>
+  <img src="https://example.com/arena1.jpg" alt="アリーナ">
+  <img src="https://example.com/arena2.jpg" alt="アリーナ2">
+</section>
 
-  <section class="arena">
-    <h2>会場情報</h2>
-    <p>会場：とどろきアリーナ</p>
-    <img src="{{arena_img2}}" alt="アリーナ外観">
-  </section>
+<!-- ===== news ===== -->
+<section>
+  <h2>NEWS</h2>
+  <p>{{date}}</p>
+  <p>{{text}}</p>
+</section>
 
-  <footer>
-    <p>&copy; Kawasaki Brave Thunders</p>
-  </footer>
-</body>
-</html>
+<!-- ===== schedule ===== -->
+<section>
+  <h2>SCHEDULE</h2>
+  <p>{{date}}（{{week}}） {{time}}</p>
+  <p>{{text}}</p>
+</section>
+
+<!-- ===== events / goods / foods / performer / service ===== -->
+<section>
+  <h2>INFO</h2>
+  <img src="{{img}}" alt="content">
+  <p>{{text}}</p
