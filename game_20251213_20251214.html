@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{date1}}〜{{date2}} vs {{opponent}} | 川崎ブレイブサンダース</title>
+<title>2025/12/13〜2025/12/14 vs テストテスト | 川崎ブレイブサンダース</title>
 <style>
   body { font-family: 'Noto Sans JP', sans-serif; background: #fff; margin: 0; padding: 0; color: #111; }
   header { background: #770000; color: #fff; padding: 20px; text-align: center; }
@@ -18,27 +18,27 @@
 
 <body>
 <header>
-  <h1>{{date1}}〜{{date2}} vs {{opponent}}</h1>
+  <h1>2025/12/13〜2025/12/14 vs テストテスト</h1>
   <p>KAWASAKI BRAVE THUNDERS ホームゲーム</p>
 </header>
 
 <section>
   <h2>試合情報</h2>
-  <p>{{description}}</p>
-  <img src="{{mv_pc}}" alt="{{opponent}} メインビジュアル">
+  <p>テストです</p>
+  <img src="https://example.com/mv_pc.jpg" alt="テストテスト メインビジュアル">
 </section>
 
 <section>
   <h2>特別イベント</h2>
-  <img src="{{special_img}}" alt="特別イベント">
-  <p>{{special_desc}}</p>
-  <a href="{{special_link}}" class="btn">詳細を見る</a>
+  <img src="https://example.com/special.jpg" alt="特別イベント">
+  <p>川崎フロンターレとのコラボ企画実施！</p>
+  <a href="https://example.com/special" class="btn">詳細を見る</a>
 </section>
 
 <section>
   <h2>会場情報</h2>
-  <img src="{{arena_img1}}" alt="アリーナ外観">
-  <img src="{{arena_img2}}" alt="アリーナ外観2">
+  <img src="https://example.com/arena1.jpg" alt="アリーナ外観">
+  <img src="https://example.com/arena2.jpg" alt="アリーナ外観2">
 </section>
 
 <section>
@@ -47,7 +47,7 @@
     {{#news}}
     <div class="card">
       <p><strong>{{date}}</strong></p>
-      <p>当日入会で500ポイント付与！</p>
+      <p>{{text}}</p>
     </div>
     {{/news}}
   </div>
@@ -59,7 +59,7 @@
     {{#schedule}}
     <div class="card">
       <p>{{date}}（{{week}}）{{time}}</p>
-      <p>当日入会で500ポイント付与！</p>
+      <p>{{text}}</p>
     </div>
     {{/schedule}}
   </div>
@@ -70,8 +70,8 @@
   <div class="card-grid">
     {{#events}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
     </div>
     {{/events}}
   </div>
@@ -82,8 +82,8 @@
   <div class="card-grid">
     {{#goods}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
     </div>
     {{/goods}}
   </div>
@@ -94,8 +94,8 @@
   <div class="card-grid">
     {{#foods}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
     </div>
     {{/foods}}
   </div>
@@ -106,8 +106,8 @@
   <div class="card-grid">
     {{#performer}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
     </div>
     {{/performer}}
   </div>
@@ -118,8 +118,8 @@
   <div class="card-grid">
     {{#service}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
     </div>
     {{/service}}
   </div>
@@ -130,7 +130,7 @@
   <div class="card-grid">
     {{#andone}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
+      <img src="{{img}}" alt="">
       <p>{{desc}}</p>
       <a href="{{link}}" class="btn">詳細</a>
     </div>
@@ -143,8 +143,8 @@
   <div class="card-grid">
     {{#fanclub}}
     <div class="card">
-      <img src="https://example.com/fan2.jpg" alt="">
-      <p>当日入会で500ポイント付与！</p>
+      <img src="{{img}}" alt="">
+      <p>{{text}}</p>
     </div>
     {{/fanclub}}
   </div>
